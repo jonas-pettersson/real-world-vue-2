@@ -9,6 +9,7 @@
 import feather from 'feather-icons'
 
 export default {
+  name: 'Icon',
   props: {
     name: String,
     width: {
@@ -22,7 +23,7 @@ export default {
   },
   computed: {
     svg() {
-      return feather.icons['users'].toSvg({
+      return feather.icons[this.name].toSvg({
         class: 'icon',
         width: this.width,
         height: this.height,
